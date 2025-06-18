@@ -11,11 +11,14 @@ app.listen(PORT,()=>{
 })
 const db= new pg.Client(
 {
-    host:'localhost',
-    database:'Scribl',
+    host:'dpg-d19jpqfgi27c73cuhpdg-a.oregon-postgres.render.com',
+    database:'scrible_database',
     port:5432,
-    password: 'sidhumoosewala',
-    user:'postgres'
+    password: 'S85gmJ37PBkgsN14LfIhmu383IdHvxNa',
+    user:'scrible_database_user',
+     ssl: {
+    rejectUnauthorized: false
+  }
 }
 )
 db.connect()
